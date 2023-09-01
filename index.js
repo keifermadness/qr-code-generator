@@ -11,7 +11,7 @@ inquirer
   ])
   .then((answers) => {
     const url = answers.URL;
-    var qrImg = qr.image(url);
+    const qrImg = qr.image(url);
     qrImg.pipe(fs.createWriteStream("qr_img.png"));
 
     fs.writeFile("URL.txt", url, (err) => {
